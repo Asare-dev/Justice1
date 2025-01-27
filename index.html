@@ -1,0 +1,442 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Justice1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Supherhero">
+    <meta name="keywords" content="programming hero,learn programming">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+
+    <!--custom css-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+    <h3></h3>
+
+    
+
+</div>
+
+
+
+
+
+<!--main js-->
+<script src="js/main.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Justice Parry Medicare Solution</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Login Page Styles */
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffffff, #ff4d4d); /* White and red gradient */
+      background-size: cover;
+      color: #333;
+    }
+
+    .login-box {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: 350px;
+    }
+
+    .login-box h1 {
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      color: #ff4d4d; /* Red accent */
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+    }
+
+    .login-box input::placeholder {
+      color: #999;
+    }
+
+    .password-container {
+      position: relative;
+    }
+
+    .password-container input {
+      padding-right: 40px; /* Space for the eye icon */
+    }
+
+    .password-container .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #ff4d4d; /* Red accent */
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 10px;
+      margin: 20px 0 10px;
+      background: #ff4d4d; /* Red accent */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .login-box button:hover {
+      background: #e60000;
+    }
+
+    .error-message {
+      color: #ff4d4d; /* Red accent */
+      margin-top: 10px;
+    }
+
+    /* Main Page Styles */
+    #mainPage {
+      display: none;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ffffff, #ff4d4d); /* White and red gradient */
+      color: #333;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: #ff4d4d; /* Red accent */
+    }
+
+    nav {
+      background: #ff4d4d; /* Red accent */
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .product {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .product img {
+      max-width: 200px;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+
+    .product h2 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #ff4d4d; /* Red accent */
+    }
+
+    .product p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .product button {
+      background: #ff4d4d; /* Red accent */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .product button:hover {
+      background: #e60000;
+    }
+
+    footer {
+      background: #ff4d4d; /* Red accent */
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .dark-mode-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #ff4d4d; /* Red accent */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .dark-mode-toggle:hover {
+      background: #e60000;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .product {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .product img {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Login Page -->
+  <div class="login-container" id="loginPage">
+    <div class="login-box">
+      <h1>Justice Parry Medicare Solution</h1>
+      <input type="text" id="username" placeholder="Enter Username">
+      <div class="password-container">
+        <input type="password" id="password" placeholder="Enter Password">
+        <span class="toggle-password" onclick="togglePasswordVisibility()">👁️</span>
+      </div>
+      <button onclick="login()">Login</button>
+      <p class="error-message" id="error"></p>
+    </div>
+  </div>
+
+  <!-- Main Page (Hidden by Default) -->
+  <div id="mainPage">
+    <!-- Header Section -->
+    <header>
+      <h1>Justice Parry Medicare Solution</h1>
+      <p>Your trusted partner for high-quality hospital equipment and medical devices.</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="#about">About Us</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+      <!-- About Us Section -->
+      <section id="about">
+        <h2>About Us</h2>
+        <p>Justice Parry Medicare Solution is a leading provider of cutting-edge medical equipment and hospital supplies. We are committed to delivering innovative solutions that enhance patient care and improve healthcare outcomes.</p>
+      </section>
+
+      <!-- Products Section -->
+      <section id="products">
+        <h2>Our Products</h2>
+        <input type="text" id="searchInput" placeholder="Search products..." oninput="searchProducts()">
+        <div id="productList"></div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or need assistance? Reach out to us!</p>
+        <form id="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <br>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <br>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Justice Parry Medicare Solution. All rights reserved.</p>
+      <p>
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Terms of Service</a> | 
+        <a href="#">Contact Support</a>
+      </p>
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Simulated Product Data
+    const products = [
+      { name: "Ventilators", image: "ventilator.png", use: "Provides mechanical ventilation to patients who cannot breathe on their own." },
+      { name: "Ultrasound Machines", image: "ultrasound.jpg", use: "Used for imaging internal organs and monitoring pregnancies." },
+      { name: "Hospital Beds", image: "hospital-bed.jpg", use: "Adjustable beds designed for patient comfort and medical care." },
+      { name: "X-Ray Machines", image: "xray-machine.jpg", use: "Captures images of bones and internal structures for diagnosis." },
+      { name: "Defibrillators", image: "defibrillator.jpg", use: "Restores normal heart rhythm during cardiac arrest." },
+      { name: "ECG Machines", image: "ecg-machine.jpg", use: "Records the electrical activity of the heart." },
+      { name: "Anesthesia Machines", image: "anesthesia-machine.jpg", use: "Delivers anesthesia during surgeries." },
+      { name: "Infusion Pumps", image: "infusion-pump.png", use: "Delivers fluids, medications, or nutrients to patients." },
+      { name: "Surgical Tables", image: "surgical-table.png", use: "Provides a stable surface for surgical procedures." },
+      { name: "Patient Monitors", image: "patient-monitor.jpg", use: "Tracks vital signs like heart rate, blood pressure, and oxygen levels." },
+      { name: "Oxygen Concentrators", image: "oxygen-concentrator.jpg", use: "Provides oxygen therapy to patients with respiratory issues." },
+      { name: "Blood Gas Analyzers", image: "blood-gas analyzer.png", use: "Measures blood gases and electrolytes." },
+      { name: "Sterilizers", image: "sterilizer.png", use: "Sterilizes medical instruments to prevent infections." },
+      { name: "Nebulizers", image: "nebulizer.jpg", use: "Converts liquid medication into a mist for inhalation." },
+      { name: "Wheelchairs", image: "wheelchair.jpg", use: "Provides mobility for patients with limited movement." },
+      { name: "Stretchers", image: "stretcher.jpg", use: "Transports patients within medical facilities." },
+      { name: "Incubators", image: "incubator.jpg", use: "Provides a controlled environment for newborns." },
+      { name: "CT Scanners", image: "ct-scanner.jpg", use: "Produces detailed cross-sectional images of the body." },
+      { name: "MRI Machines", image: "mri-machine.jpg", use: "Uses magnetic fields to create detailed images of organs and tissues." },
+      { name: "Dialysis Machines", image: "dialysis-machine.jpg", use: "Filters blood for patients with kidney failure." }
+    ];
+
+    let cart = [];
+
+    // Login Functionality
+    function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (username && password === 'Parry@medicare') {
+        document.getElementById('loginPage').style.display = 'none';
+        document.getElementById('mainPage').style.display = 'block';
+        loadProducts();
+      } else {
+        document.getElementById('error').innerText = 'Invalid username or password!';
+      }
+    }
+
+    // Toggle Password Visibility
+    function togglePasswordVisibility() {
+      const passwordInput = document.getElementById('password');
+      const toggleIcon = document.querySelector('.toggle-password');
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleIcon.textContent = '👁️';
+      } else {
+        passwordInput.type = 'password';
+        toggleIcon.textContent = '👁️';
+      }
+    }
+
+    // Load Products
+    function loadProducts() {
+      const productList = document.getElementById('productList');
+      productList.innerHTML = products
+        .map(
+          (product) => `
+            <div class="product">
+              <img src="${product.image}" alt="${product.name}">
+              <div>
+                <h2>${product.name}</h2>
+                <p><strong>Use:</strong> ${product.use}</p>
+                <button onclick="addToCart('${product.name}')">Add to Cart</button>
+              </div>
+            </div>
+          `
+        )
+        .join('');
+    }
+
+    // Search Products
+    function searchProducts() {
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+      const filteredProducts = products.filter((product) =>
+        product.name.toLowerCase().includes(searchTerm)
+      );
+      const productList = document.getElementById('productList');
+      productList.innerHTML = filteredProducts
+        .map(
+          (product) => `
+            <div class="product">
+              <img src="${product.image}" alt="${product.name}">
+              <div>
+                <h2>${product.name}</h2>
+                <p><strong>Use:</strong> ${product.use}</p>
+                <button onclick="addToCart('${product.name}')">Add to Cart</button>
+              </div>
+            </div>
+          `
+        )
+        .join('');
+    }
+
+    // Add to Cart
+    function addToCart(productName) {
+      const product = products.find((p) => p.name === productName);
+      if (product) {
+        cart.push(product);
+        alert(`${productName} added to cart!`);
+      }
+    }
+  </script>
+</body>
+</html>
